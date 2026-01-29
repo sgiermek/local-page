@@ -1,0 +1,27 @@
+# TXT supports 2 formats:
+#
+# 1) Sections:
+# [local]
+# Jenkins, http://jenkins.local, CI/CD
+#
+# 2) Lines with the "|" separator:
+# local|Jenkins|http://jenkins.local|CI/CD|Jenkins|10
+
+[local]
+Jenkins, http://jenkins.local, CI/CD
+Portainer, http://portainer.local, Docker management
+Home Assistant, http://ha.local, Home automation
+
+[tools]
+OVH, https://www.ovh.com/, DNS / hosting
+GitHub, https://github.com/, Repositories
+Brevo, https://www.brevo.com/, Email
+
+[ai]
+OpenAI Platform, https://platform.openai.com/, API
+Gemini, https://gemini.google.com/, Chat
+ChatGPT, https://chatgpt.com/, Chat
+
+[other]
+Grafana, http://grafana.local, Dashboards
+Prometheus, http://prometheus.local, Metrics
