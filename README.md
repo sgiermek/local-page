@@ -1,10 +1,24 @@
 # Start page (local links)
 
-A simple, dark start page with categorized links. No frameworks — just HTML/CSS/JS.
+A simple, dark start page with categorized links. No frameworks — just HTML/CSS/TypeScript.
+
+## Requirements
+
+- Node.js (for TypeScript compilation)
+
+## Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Build TypeScript
+npm run build
+```
 
 ## Usage
 
-The page **always** loads `links.txt` placed next to `index.html`.
+The page loads `links.txt` placed next to `index.html`.
 
 ### First-time setup
 
@@ -14,25 +28,42 @@ Create your local `links.txt` from the provided template:
 cp links.sample.txt links.txt
 ```
 
-### Run (recommended — via HTTP)
+### Run
 
-Run a simple server in the project directory, e.g.:
+Start a local server in the project directory:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then open:
+Then open `http://localhost:8080/`
 
-- `http://localhost:8080/`
+### Development
+
+Watch mode for TypeScript (auto-recompile on changes):
+
+```bash
+npm run dev
+```
+
+## Project structure
+
+```
+├── src/
+│   └── app.ts        # Source (TypeScript)
+├── dist/
+│   └── app.js        # Compiled output (generated)
+├── index.html
+├── styles.css
+├── links.txt         # Your links (git-ignored)
+└── links.sample.txt  # Template
+```
 
 ## File format
 
-### TXT
-
 Two formats are supported:
 
-#### 1) Sections
+### 1) Sections
 
 ```txt
 [local]
@@ -42,14 +73,17 @@ Jenkins, http://jenkins.local, CI/CD
 GitHub, https://github.com/, Repositories
 ```
 
-#### 2) `|` separator
+### 2) Pipe separator
 
 ```txt
 local|Jenkins|http://jenkins.local|CI/CD|Jenkins|10
 tools|GitHub|https://github.com/|Repositories|Code|20
 ```
 
+Format: `category|name|url|description|tag|order`
+
 ## Categories
 
-Preferred: `local`, `tools`, `ai`. Any other categories will also work (they’ll show below).
+Main categories: `local`, `tools`, `ai` (displayed as columns).
 
+Any other categories will appear below in a separate section.

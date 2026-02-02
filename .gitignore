@@ -2,3 +2,9 @@
 
 # Local links file (personal / environment-specific)
 links.txt
+
+# Build output
+dist/
+
+# Dependencies
+node_modules/
