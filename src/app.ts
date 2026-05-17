@@ -29,8 +29,8 @@ interface RenderOptions {
 type Format = "pipe" | "sections" | "unknown";
 
 // --- Constants ---
-const CATEGORY_ORDER = ["local", "tools", "ai"] as const;
-const CATEGORY_LABELS: Record<string, string> = { local: "local", tools: "tools", ai: "ai" };
+const CATEGORY_ORDER = ["lan", "tools", "ai"] as const;
+const CATEGORY_LABELS: Record<string, string> = { lan: "lan", tools: "tools", ai: "ai" };
 
 // --- DOM helpers ---
 const $ = <T extends HTMLElement>(sel: string): T | null => document.querySelector<T>(sel);
@@ -65,7 +65,7 @@ const compact = (s: string | null | undefined): string =>
 const normalizeCategory = (raw: string | null | undefined): string => {
   const c = compact(raw).toLowerCase();
   if (!c) return "other";
-  if (c === "lokalne") return "local";
+  if (c === "lokalne" || c === "local" || c === "lan") return "lan";
   if (c === "narzedzia" || c === "narzędzia") return "tools";
   return c;
 };

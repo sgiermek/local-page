@@ -66,8 +66,8 @@ Two formats are supported:
 ### 1) Sections
 
 ```txt
-[local]
-Jenkins, http://jenkins.local, CI/CD
+[lan]
+Jenkins, http://jenkins.lan, CI/CD
 
 [tools]
 GitHub, https://github.com/, Repositories
@@ -76,7 +76,7 @@ GitHub, https://github.com/, Repositories
 ### 2) Pipe separator
 
 ```txt
-local|Jenkins|http://jenkins.local|CI/CD|Jenkins|10
+lan|Jenkins|http://jenkins.lan|CI/CD|Jenkins|10
 tools|GitHub|https://github.com/|Repositories|Code|20
 ```
 
@@ -84,6 +84,6 @@ Format: `category|name|url|description|tag|order`
 
 ## Categories
 
-Main categories: `local`, `tools`, `ai` (displayed as columns).
+Main categories: `lan`, `tools`, `ai` (displayed as columns).
 
 Any other categories will appear below in a separate section.

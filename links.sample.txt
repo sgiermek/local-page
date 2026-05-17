@@ -1,16 +1,16 @@
 # TXT supports 2 formats:
 #
 # 1) Sections:
-# [local]
-# Jenkins, http://jenkins.local, CI/CD
+# [lan]
+# Jenkins, http://jenkins.lan, CI/CD
 #
 # 2) Lines with the "|" separator:
-# local|Jenkins|http://jenkins.local|CI/CD|Jenkins|10
+# lan|Jenkins|http://jenkins.lan|CI/CD|Jenkins|10
 
-[local]
-Jenkins, http://jenkins.local, CI/CD
-Portainer, http://portainer.local, Docker management
-Home Assistant, http://ha.local, Home automation
+[lan]
+Jenkins, http://jenkins.lan, CI/CD
+Portainer, http://portainer.lan, Docker management
+Home Assistant, http://ha.lan, Home automation
 
 [tools]
 OVH, https://www.ovh.com/, DNS / hosting
@@ -23,5 +23,5 @@ Gemini, https://gemini.google.com/, Chat
 ChatGPT, https://chatgpt.com/, Chat
 
 [other]
-Grafana, http://grafana.local, Dashboards
-Prometheus, http://prometheus.local, Metrics
+Grafana, http://grafana.lan, Dashboards
+Prometheus, http://prometheus.lan, Metrics
